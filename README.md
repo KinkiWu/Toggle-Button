@@ -7,7 +7,7 @@ toggle button directive for angular
  <script type="text/javascript" src="toggle-button.js"></script>
 ```
 
-2. Add the style file to your page: You must using sass to compile the scss to css first
+2. Add the style file to your page
 ```html
  <link rel="stylesheet" href="toggle.css">   
 ```
