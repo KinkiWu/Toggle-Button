@@ -22,7 +22,7 @@ toggle button directive for angular
 <toggle-btn ng-model="info.Enable" 
             trigger="info.toggleCtrlBtnFunc()" 
             disable="info.NeedDisable" 
-            text="{{AUTO_REFRESH}}">
+            text="Enable Function">
 </toggle-btn>
 ```
 
