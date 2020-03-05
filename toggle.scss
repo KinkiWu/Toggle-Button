@@ -1,70 +1,19 @@
-:root {
-	--toggleHeight: 25px;
-	--toggleWidth: 50px;
-	--toggleGap: 3px;
-}
+:root { --toggleHeight: 25px; --toggleWidth: 50px; --toggleGap: 3px; }
 
-.togglebtn {
-	width: 0;
-	height: 0;
-	// Setting oapcity to 0 rather than changing the visibility
-	// or the display mode allows us to preserve keyboard interactions.
-	opacity: 0;
-}
+.togglebtn { width: 0; height: 0; opacity: 0; }
 
-label.checkbox-text-light{
-    color:$font-color-light;
-    font-size: 14px;
-    vertical-align: middle;
-}
-label.checkbox-text-default{
-    color:$font-color-init;
-    font-size: 14px;
-    vertical-align: middle;
-}
+label.checkbox-text-light { color: #FFFFFF; font-size: 14px; vertical-align: middle; }
 
-.togglebtn + label {
-	position: relative;
-	background: #c0c0c0;
-	width: var(--toggleWidth);
-	height: var(--toggleHeight);
-	display: inline-flex;
-	align-items: center;
-	border-radius: 25px;
-	cursor: pointer;
-	transition: background 0.2s ease-in-out;
-	text-indent: calc( var(--toggleWidth) + 10px);
-	white-space: nowrap;
-        vertical-align: middle;
-        box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.4);
-        
-	&:after {
-		content: "";
-		background: #fff;
-		width: calc(var(--toggleHeight) - (var(--toggleGap) * 2));
-		height: calc(var(--toggleHeight) - (var(--toggleGap) * 2));
-		position: absolute;
-		top: var(--toggleGap);
-		left: var(--toggleGap);
-		border-radius: 50%;
-		transition: left 0.3s ease-in-out, background 0.2s ease-in-out;
-                box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
-	}
-}
+label.checkbox-text-default { color: #656b79; font-size: 14px; vertical-align: middle; }
 
-.togglebtn:disabled + label {
-    background: #858585;
-    cursor:not-allowed;
-    &:after {
-        background: #909090;
-    }
-}
+.togglebtn + label { position: relative; background: #c0c0c0; width: var(--toggleWidth); height: var(--toggleHeight); display: inline-flex; align-items: center; border-radius: 25px; cursor: pointer; transition: background 0.2s ease-in-out; text-indent: calc( var(--toggleWidth) + 10px); white-space: nowrap; vertical-align: middle; box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.4); }
 
-.togglebtn:checked + label {
-	background: $btn-color-info;
-        box-shadow:inset 2px 2px 5px rgba(0, 0, 0, 0.4);
-	&:after {
-		left: calc(100% - calc(var(--toggleHeight) - var(--toggleGap)));
-                box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
-	}
-}
+.togglebtn + label:after { content: ""; background: #fff; width: calc(var(--toggleHeight) - (var(--toggleGap) * 2)); height: calc(var(--toggleHeight) - (var(--toggleGap) * 2)); position: absolute; top: var(--toggleGap); left: var(--toggleGap); border-radius: 50%; transition: left 0.3s ease-in-out, background 0.2s ease-in-out; box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4); }
+
+.togglebtn:disabled + label { background: #858585; cursor: not-allowed; }
+
+.togglebtn:disabled + label:after { background: #909090; }
+
+.togglebtn:checked + label { background: #49A5C7; box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4); }
+
+.togglebtn:checked + label:after { left: calc(100% - calc(var(--toggleHeight) - var(--toggleGap))); box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4); }
