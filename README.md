@@ -18,7 +18,7 @@ toggle button directive for angular
 ```
 
 ## Usage
-``` html
+``` html=
 <toggle-btn ng-model="info.Enable" 
             trigger="info.toggleCtrlBtnFunc()" 
             disable="info.NeedDisable" 
